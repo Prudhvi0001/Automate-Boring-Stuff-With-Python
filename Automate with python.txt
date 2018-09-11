@@ -1,6 +1,7 @@
 #Intro:
 
-​    The programming language name Python was originated from a British comedy show called Monty python,Python programmers are affectionately called as Pythonistas.
+​  The programming language name Python was originated from a British comedy show called Monty python,
+   Python programmers are affectionately called as Pythonistas.
 ​	 In Python, 2 + 2 is called an expression
 ​	 expression is a sum of values and operators(+,-,/,....).
 
