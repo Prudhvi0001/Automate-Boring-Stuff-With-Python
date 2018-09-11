@@ -1,0 +1,1063 @@
+#Intro:
+
+​    The programming language name Python was originated from a British comedy show called Monty python,Python programmers are affectionately called as Pythonistas.
+​	 In Python, 2 + 2 is called an expression
+​	 expression is a sum of values and operators(+,-,/,....).
+
+First program:
+ hello.py
+
+#OPERATORS:
+ **  Exponent  2 ** 3 = 8;
+ %   Modulus/remainder  22 % 8 = 6
+ //  Integer division/floored quotient  22 // 8 = 2
+ /    Division   22 / 8 = 2.75
+ *   Multiplication    3 * 5 = 15
+ -   Subtraction   5 - 2 = 3
+ +   Addition     2 + 2 = 4
+
+ EXAMPLES:
+  >>> 2 + 3 * 6
+  >>>   20
+  >>> (2 + 3) * 6
+  >>>   30
+  >>> 48565878 * 578453
+  >>>  28093077826734
+  >>> 2 ** 8
+  >>>   256
+  >>> 23 / 7
+  >>>   3.2857142857142856
+  >>> 23 // 7
+  >>>   3
+  >>> 23 % 7
+  >>>   2
+  >>> 2 + 2
+  >>>   4
+  >>> (5 - 1) * ((7 + 1) / (3 - 1))
+  >>>   16.0
+
+ BASIC ERRORS:
+  >>>5 +
+  >>>  File "<stdin>", line 1
+    5 +
+      ^
+      SyntaxError: invalid syntax
+    
+      >>>42 + 5 + * 2
+      File "<stdin>", line 1
+      42 + 5 + * 2
+              ^
+              SyntaxError: invalid syntax
+
+#DATA TYPES:
+
+  Integers      -2, -1, 0, 1, 2, 3, 4, 5
+  Floating-point numbers  -1.25, -1.0, -0.5, 0.0, 0.5, 1.0, 1.25
+  Strings   'a', 'aa', 'Aaa', 'Hello!', '11 cats'
+  print() = blank string.
+
+  * To convert one data type to other data type functions such as:
+      int(),float(),str() are used.
+
+  >>> str(0)
+  >>>   '0'
+  >>> str(-3.14)
+  >>>   '-3.14'
+  >>> int('42')
+  >>>   42
+  >>> int('-99')
+  >>>   -99
+  >>> int(1.25)
+  >>>   1
+  >>> int(1.99)
+  >>>   1
+  >>> float('3.14')
+  >>>   3.14
+  >>> float(10)
+  >>>   10.0
+
+String concatenation and replication:
+
+-  'Alice' + 'Bob'
+
+
+-  'AliceBob'
+- 'Alice' * 5
+-  'AliceAliceAliceAliceAlice'
+
+ BASIC ERRORS:
+
+> > > 'Alice' * 'Bob'
+
+```python
+Traceback (most recent call last):
+File "<pyshell#32>", line 1, in <module>
+  'Alice' * 'Bob'
+  TypeError: can't multiply sequence by non-int of type 'str'
+
+  >>> 'Alice' * 5.0
+  Traceback (most recent call last):
+  File "<pyshell#33>", line 1, in <module>
+  'Alice' * 5.0
+  TypeError: can't multiply sequence by non-int of type 'float'
+
+  >>> 'Alice' + 42
+  Traceback (most recent call last):
+  File "<pyshell#26>", line 1, in <module>
+  'Alice' + 42
+  TypeError: Can't convert 'int' object to str implicitly
+```
+
+#VARIABLES:
+
+  A variable is like a box in the computer’s memory where you can store a single value.
+
+  >>> spam = 40
+  >>> spam
+  >>>   40
+  >>> eggs = 2
+  >>> spam + eggs
+  >>>   42
+  >>> spam + eggs + spam
+  >>>   82
+  >>> spam = spam + 2
+  >>> spam
+  >>>   42
+
+  1.It can be only one word.
+  2.It can use only letters, numbers, and the underscore (_) character.
+  3.It can’t begin with a number.
+
+Comparisons:
+
+  ==     Equal to
+  !=     Not equal to
+  <      Less than
+  >      Greater than
+  >        <=     Less than or equal to
+  >      =     Greater than or equal to
+
+  >>> 2 > 1
+  >>>   True
+  >>> 3 != 3
+  >>>   False
+
+Boolean expressions:
+
+  >>>True
+  >>>False
+
+  expressions like 0,0.0,''(empty string) are considered False while using flow controls,
+  and others are considered as True.
+
+
+  >>>2 = 2
+  >>> ERROR
+  >>>2 == 2
+  >>>  True
+  >>>'hello'=='Hello'
+  >>>  False
+
+#Boolean operators:
+
+  1.And (True when both are True otherwise False)
+
+  2.Or (False only when both are False otherwise True)
+
+  3.Not (True means False and vice versa)
+
+  This are used to combine both Boolean and Comparisons
+
+#Flow Control:
+  It consists of conditions and block code.
+
+ #IF statement:
+  It says that "if this condition is true then execute the code in the block otherwise skip the code"
+  1.The if keyword.
+  2.Then the condition required.
+  3.A colon.
+  4.starting on the next line an indented block of code
+  EX:
+   >>>if name=='Alice'
+           print("Hi, Alice")
+
+  The if clause can optionally followed by an else statement as:
+  1.The else keyword.
+  2.A colon
+  3.starting the next line an indented block of code.
+  EX:
+  if name=='Alice'
+      print("Hi, Alice")
+  else:
+      print("Hi, stranger")
+
+  when their are many possible conditions with each having different clause
+  then other statement is used i.e elif statement
+  1.the elif keyword.
+  2.the condition.
+  3.a colon.
+  4.starting on the next line an indented block of code.
+  EX:
+  if age>12:
+      print("your are grown up")
+  elif age<12:
+      print("you are a kiddo")
+  else:
+      print("you are not born yet!")
+
+ #WHILE statement:
+  while statement is used to iterate a block of code over and over again till the given condition is satisfied.
+  EX:
+  spam=0
+  while spam<5:
+      print("five times 5")
+      spam=spam+1
+  if we use if instead of while it will only print the print statement once,
+  But by using while statement it prints the statement 5 times till spam is <5.
+
+  while executing statements like this sometimes it may execute in a infinite loop
+  to avoid this break and continue statement are used.
+
+  BREAK:
+    it is used to break a condition and get out of the loop.
+  CONTINUE:
+    it is used to stop the code their and start the code to execute again from start.
+    EX:
+    swordfish.py
+
+ #FOR statement:
+    while loop keeps looping the clause until the condition is true but if you want to loop
+    only certain number of times for loop is useful by defining a range function.
+    1.The for keyword.
+    2.A variable name.
+    3.The in keyword.
+    4.A call to the range() method with up to three integers passed to it.
+    5.a colon.
+    6.starting the next line with an indented block of line.
+    EX:
+    print("This is a for loop:")
+    for i in range(5):
+        print("jimmy five times",'('+str(i)+')')
+    
+    RANGE function:
+      range(a,b,c)
+      a = starting point.
+      b-1 = ending point.
+      c = interval gap (b/w a and next point).
+      EX:
+      range(12,16)
+      12,13,14,15.
+      range(0,10,2)
+      0,2,4,6,8.
+      range(5)
+      0,1,2,3,4.
+      range(10,0,-2)
+      10,8,6,4,2.
+
+#Import modules:
+  python has functions like print(),round(),abs(),......etc
+  but their are also other functions in the python standard library which are invoked the import keyword
+  followed by the functions
+
+  EX:
+  import math (it contains different kind of mathematical equations)
+  import random (function of random related events)
+  like random.randint(a,b)-(it generates a random integer b/w a and b)
+  import sys(it has sys.exit() function by using which we can exit the program when ever we want )
+  ///Rather than using random before every function we can invoke the import statement
+  as (from random import*)///
+
+#Functions:
+  Functions are like mini programs inside the main program.
+  The main purpose of functions is to avoid the execution of the group that executes multiple times
+  without function which you have to copy and paste all over the code.
+  A def keyword is used to define a function
+  the condition are stated inside the def statement and the function can recalled anytime in the function
+
+  EX:
+  def hello():
+   print('Howdy!')
+   print('Howdy!!!')
+   print('Hello there.')
+  hello()
+  hello()
+  hello()
+
+  Output:
+  Howdy!
+  Howdy!!!
+  Hello there.
+  Howdy!
+  Howdy!!!
+  Hello there.
+  Howdy!
+  Howdy!!!
+  Hello there.
+
+ def statements are also used with parameters
+
+ def hello(name):
+    print("Hi",name)
+ hello(prudhvi)
+
+ HI prudhvi
+
+ RETURN:
+
+  It is used to return a value from the function:
+    1.The return keyword
+    2.The value or expression to be returned.
+  EX:
+  magic8ball.py
+  def magic8ball(b):
+      if b==1:
+          return 'you are damm'
+      elif b==2:
+          return 'two square'
+      elif b==3:
+          return 'you hit the jackpot'
+      elif b==4:
+          return 'you got an another chance'
+      elif b==5:
+          return 'you must do a frog walk'
+      elif b==6:
+          return 'you are sexy'
+      elif b==7:
+          return 'best of luck'
+      elif b==8:
+          return 'king is on his way'
+
+  for i in range(5):
+      x=int(input())
+      print(magic8ball(x))
+
+   ***This program returns the value according to the input integer value.
+ The NONE value:
+ None is the only value of the None Type data type. (Other programming languages might call this value
+ ->null.
+ ->nil.
+ ->undefined.
+ return None statement at the end of the function returns nothing
+
+#Keyword Arguments:
+   This are identified as the keyword before calling the function.
+  for example print() function has keywords like end='',sep='',...
+  which are used in the function for different purpose:
+  such as
+
+  Normal input:
+  print('hello')
+  print('world')
+
+  Normal output:
+  hello
+  world
+
+  keyword input:
+  print('hello', end='')
+  print('world')
+
+  keyword output:
+  helloworld
+
+  EX:
+  >>>print('cats', 'dogs', 'mice')
+  >>>  cats dogs mice
+  >>>print('cats', 'dogs', 'mice', sep=',')
+  >>>  cats,dogs,mice
+
+#Local and Global space:
+  EX:
+  def spam():
+    eggs = 'spam local'
+    print(eggs)    # prints 'spam local'
+  def bacon():
+    eggs = 'bacon local'
+    print(eggs)    # prints 'bacon local'
+    spam()
+    print(eggs)    # prints 'bacon local'
+  eggs = 'global'
+  bacon()
+  print(eggs)        # prints 'global'
+
+  output:
+  bacon Local
+  spam local
+  bacon local
+  global
+
+  We can define a variable as global by global statement:
+  EX:
+  def spam():
+     global eggs
+     eggs = 'spam'
+  eggs = 'global'
+  spam()
+  print(eggs)
+
+  output:
+  spam
+
+#Exception Handling:
+  If their is an error in the code then the code stops running as system breaks,
+  you don't want this to happen to your end user due to some unnecessary. due to some SyntaxError
+  to avoid this problem we use statement like Try and Except in your function.
+  usage:
+  when you find an error block of code place it in the try: function and run an expect:
+  function condition or alternative block of code to execute if this fails.
+  EX:
+  normal i/p:
+  def spam(divideBy):
+    return 42 / divideBy
+  print(spam(2))
+  print(spam(12))
+  print(spam(0))
+  print(spam(1))
+  THIS CODE WILL GIVE AN ERROR IN LINE print(spam(0)) DUE TO ZeroDivisionError: division by zero
+
+  We can retify this by using:
+  EX:
+  def spam(divideBy):
+    try:  #try statement
+        return 42 / divideBy
+    except:    #except statement
+        print('Error: Invalid argument.')
+  print(spam(2))
+  print(spam(12))
+  print(spam(0))
+
+
+
+
+  print(spam(1))
+
+#Lists:
+   A list is a value that contains multiple values in an ordered sequence.
+   EX:
+   >>>[1, 2, 3]
+   >>>   [1, 2, 3]
+   >>>['cat', 'bat', 'rat', 'elephant']
+   >>>   ['cat', 'bat', 'rat', 'elephant']
+   >>>['hello', 3.1415, True, None, 42]
+   >>>   ['hello', 3.1415, True, None, 42]
+   >>>spam = ['cat', 'bat', 'rat', 'elephant']
+   >>>spam
+   >>>   ['cat', 'bat', 'rat', 'elephant']
+
+   We can call any value from list by using index of the value it starts from 0
+   EX:
+   >>>spam = ['cat', 'bat', 'rat', 'elephant']
+   >>>spam[0]
+   >>>   'cat'
+   >>>spam[1]
+   >>>   'bat'
+   >>>spam[2]
+   >>>   'rat'
+   >>>spam[3]
+   >>>   'elephant'
+
+  examples related to lists:
+
+   1.list inside list
+   >>>spam = [['cat', 'bat'], [10, 20, 30, 40, 50]]
+   >>>spam[0]
+   >>>   ['cat', 'bat']
+   >>>spam[0][1]
+   >>>   'bat'
+   >>>spam[1][4]
+   >>>   50
+
+   2.Negative Indexes
+   >>>spam = ['cat', 'bat', 'rat', 'elephant']
+   >>>spam[-1]
+   >>>   'elephant'
+   >>>spam[-3]
+   >>>   'bat'
+   >>>'The ' + spam[-1] + ' is afraid of the ' + spam[-3] + '.'
+   >>>   'The elephant is afraid of the bat.'
+
+   3.Getting Sub-lists with Slices
+   >>>spam = ['cat', 'bat', 'rat', 'elephant']
+   >>>spam[0:4]
+   >>>   ['cat', 'bat', 'rat', 'elephant']
+   >>>spam[1:3]
+   >>>   ['bat', 'rat']
+   >>>spam[0:-1]
+   >>>   ['cat', 'bat', 'rat']
+
+   4.Getting list length
+   >>>spam = ['cat', 'bat', 'rat', 'elephant']
+   >>>len(spam)
+   >>>   4
+
+   5.Changing values with Indexes
+   >>>spam = ['cat', 'bat', 'rat', 'elephant']
+   >>>spam[1]=dogs
+   >>>spam
+   >>>   ['cat', 'dogs', 'rat', 'elephant']
+
+   6.List concatenation and List replication
+   >>>spam=[1,2,3]+[4,5,6]
+   >>>spam
+   >>>   [1,2,3,4,5,6]
+   >>>spam*2
+   >>>   [1,2,3,4,5,6,1,2,3,4,5,6]
+
+   7.Removing values from List using del statement
+   >>>spam = ['cat', 'bat', 'rat', 'elephant']
+   >>>del spam[1]
+   >>>spam
+   >>>   ['cat', 'rat', 'elephant']
+
+   8.Working with lists:
+   EX:
+   allmycats.py
+
+   9.using for loops with Lists
+   >>>supplies = ['pens', 'staplers', 'flame-throwers', 'binders']
+   >>>for i in range(len(supplies)):
+                print('Index ' + str(i) + ' in supplies is: ' + supplies[i])
+   Index 0 in supplies is: pens
+   Index 1 in supplies is: staplers
+   Index 2 in supplies is: flame-throwers
+   Index 3 in supplies is: binders
+
+   10.The multiple assignment trick
+    >>>cat = ['fat', 'black', 'loud']
+    >>>size, color, disposition = cat
+    this code is same as
+    >>>cat = ['fat', 'black', 'loud']
+    >>>size = cat[0]
+    >>>color = cat[1]
+    >>>disposition = cat[2]
+
+ #METHODS:
+   1.Find index using index statement:
+      >>>cat = ['fat', 'black', 'loud']
+      >>>cat.index('black')
+      1
+   2.Adding values using append and insert statement:
+      >>>cat = ['fat', 'black', 'loud']
+      >>>cat.append('mice')
+      >>>cat
+      ['fat', 'black', 'loud', 'mice']
+      >>>cat.insert(1,'goat')
+      >>>cat
+      ['fat', 'goat', 'black', 'loud', 'mice']
+   3.Removing values with remove statement:
+      >>>cat = ['fat', 'black', 'loud']
+      >>>cat.remove('black')
+      >>>cat
+      ['fat', 'loud']
+     If there are two same variables it removes the first one.
+   4.Sorting values in a list with sort statement:
+         >>>spam = [2, 5, 3.14, 1, -7]
+         >>>spam.sort()
+         >>>spam
+         [-7, 1, 2, 3.14, 5]
+         >>>spam = ['ants', 'cats', 'dogs', 'badgers', 'elephants']
+         >>> spam.sort()
+         >>>spam
+         ['ants', 'badgers', 'cats', 'dogs', 'elephants']
+    
+         You can also sort in reverse order;
+         >>>spam=['ants', 'cats', 'dogs', 'badgers']
+         >>>spam.sort(reverse=True)
+         >>>spam
+         ['dogs', 'cats', 'badgers', 'ants']
+    
+         SORT USES 'ASCIIbetical order'
+         A,B,......Z,a,b,....z
+         If you want to sort in alphabetical order
+         use spam.sort(key=str.lower)
+    One of the important feature of list is we can only assign reference to the variables to which the list is refer to.
+    i.e:
+    >>>x=[1,2,3]
+    >>>y=x
+    >>>y.append(4)
+    >>>y
+    [1,2,3,4]
+    >>>x
+    [1,2,3,4]
+    The value changes in both of them.
+    To avoid this module copy is helpful
+    import copy and use funtions like:
+    copy.copy()  - To copy a list
+    copy.deepcopy()   - To copy a list with the lists inside of it.([1,2,[3,4]])
+
+#TUPLES and STRINGS:(List-Like Types)
+        Strings are also a type of data types and they have some   properties of lists.
+        such as:
+        1.
+        >>>x=prudhvi
+        >>>x[0]
+        p
+        >>>x[1]
+        r
+        >>>x[2]
+        u
+        >>>x[3]
+        d
+        2.
+        >>>x[0:4]
+        prud
+        3.But you can't add or remove any items in a string like lists becoz they are immutable.
+        And lists are mutable.
+    
+    Tuples are also a kind of lists but the values are written in parenthesis().
+    such as:
+      >>>x=('hello',2,3)
+      >>>x[0]
+      'hello'
+      >>>len(x)
+      3
+      This are also immutable and we can't append or remove any items from tuples.
+      This are used in applications where you don't want to change the data.
+    
+    Conversion from Tuples to Lists and vice versa:
+        we use functions like list() and tuple()
+          >>>x=list(('hello',2,3))
+          >>>x
+          ['hello',2,3]
+          >>>tuple(x)
+          >>>x
+          ('hello',2,3)
+       This come in very handy while using the information interchangeably.
+
+#Augmented assignment operators:
+  spam = spam + 1
+  spam += 1
+  spam = spam - 1
+  spam -= 1
+  spam = spam * 1
+  spam *= 1
+  spam = spam / 1
+  spam /= 1
+  spam = spam % 1
+  spam %= 1
+
+#Dictionary data type:
+    Like lists Dictionary also have different values in them.
+    Unlike index(integers) in lists, dictionary have different data types called as keys.
+    The dictionaries have a key with associated value as a key-value pair.
+    Flower brackets {} are used for dictionaries.
+    EX:
+    >>>mycat={'size':'fat', 'color':'black', 'disposition':'loud'}
+    >>>mycat['size']
+    'fat'
+    >>>'my cat has'+mycat['color']+'fur'
+    my cat has black fur
+    Unlike lists dictionaries are unordered
+    >>>spam = ['cats', 'dogs', 'moose']
+    >>>bacon = ['dogs', 'moose', 'cats']
+    >>>spam == bacon
+    False
+    >>>eggs = {'name': 'Sophie', 'species': 'cat', 'age': '8'}
+    >>>ham = {'species': 'cat', 'age': '8', 'name': 'Sophie'}
+    >>>eggs == ham
+    True
+    EX:
+    birthdays.py
+    
+    4.The keys(),values(),items() method.
+        >>>spam = {'color': 'red', 'age': 42}
+        >>>for v in spam.values():
+                      print(v)
+        red
+        4
+        >>>for k in spam.keys():
+                      print(k)
+        color
+        age
+        >>>for i in spam.items():
+                      print(i)
+        ('color', 'red')
+        ('age', 42)
+        *->the values returned from items() are tuples
+        Convert into lists:
+          >>>spam = {'color': 'red', 'age': 42}
+          >>>spam.keys()
+          dict_keys(['color', 'age'])
+          >>>list(spam.keys())
+          ['color', 'age']
+    3.We can seperate keys and values using for loop:
+       >>>spam = {'color': 'red', 'age': 42}
+       >>>for k,v in spam.items():
+                  print('key=',str(k),'value=',str(v))
+      key=age value=42
+      key=color value=red
+      check whether a key or value exist in a dict:
+      >>>color in spam.keys()
+      True
+      >>>size not in spam.keys()
+      True
+      1.THE get() METHOD:
+        Though we can access the values of the dict by using keys, but what if there is no certain key
+        From get() function we can pass two arguments such that one of for value
+        and other to return a value if the key is not present.
+          EX:
+          >>>picnicItems = {'apples': 5, 'cups': 2}
+          >>>'I am bringing ' + str(picnicItems.get('cups', 0)) + ' cups.'
+          'I am bringing 2 cups.'
+          >>>'I am bringing ' + str(picnicItems.get('eggs', 0)) + ' eggs.'
+          'I am bringing 0 eggs.'
+      2.THE setdefault() METHOD:
+         Though we can assign values to the given key by using dict[key]=value
+         if their is already that key in the dict we may change the value of that key.
+         To avoid this setdefault() function is used.
+         if we change the value of the key again it will not change.
+         by this we can also known if a key is present in the dict or not.
+         The key and the value are passed to the function.
+            EX:
+            >>>spam = {'name': 'Pooka', 'age': 5}
+            >>>spam.setdefault('color', 'black')
+            'black'
+            >>>spam
+            {'color': 'black', 'age': 5, 'name': 'Pooka'}
+            >>>spam.setdefault('color', 'white')
+            'black'
+            >>>spam
+            {'color': 'black', 'age': 5, 'name': 'Pooka'}
+        6.Nested lists and dicts:
+          itemsbrought.py
+
+#Strings:
+    Most of the data we handle is in the from of strings so by handling strings we can improve our code.
+    their are various functions for handling strings like:
+     1.String literals:
+        1.Double quotes:
+          this can be used to avoid single quotes the string.
+          >>>print("hey! don't do that")
+          hey! don't do that
+        2.Escape characters:
+              >>>print('Escape this don\'t')
+              Escape this don't
+          \'      single quote
+          \"      double quote
+          \t      tab
+          \n      new line
+          \\      backslash
+              >>>print("hi\n how do you do ")
+              hi
+              how do you do
+        3.Raw strings:
+         By placing r before the quotation marks makes it a raw string
+                >>>print(r'this is \' string')
+                this is \' string
+        4.Multiple strings and triple quotes:
+         By placing string in triple quotes we can write strings in multiple lines easily.
+         without using \n
+         ///We can also write comments in triple quotes for multiline ones.///
+      2.Indexing and Slicing strings:
+              >>>spam = 'Hello world!'
+              >>>spam[0]
+              'H'
+              >>>spam[4]
+              'o'
+              >>>spam[-1]
+              '!'
+              >>>spam[0:5]
+              'Hello'
+      3.The in and not in operators:
+                >>>'Hello' in 'Hello World'
+                True
+                >>>'Hello' in 'Hello'
+                True
+                >>>'HELLO' in 'Hello World'
+                False
+                >>>'' in 'spam'
+                True
+                >>>'cats' not in 'cats and dogs'
+                False
+      4.String methods:
+        1.The upper(),lower(),isupper(),islower() methods:
+          upper()--> changes string to UPPERCASE.
+          lower()--> changes string to lowercase.
+          isupper()--> checks whether the string is UPPERCASE and return a bool(T/F)
+          islower()--> checks whether the string is lowercase and return a bool(T/F)
+               >>>'hello'.upper()
+               'HELLO'
+               >>>'Hello'.isupper()
+               False
+               >>>'abc123'.islower()
+               True
+        2.The isX() methods:
+          •  isalpha() returns Trueif the string consists only of letters and is not blank.
+          • isalnum() returns Trueif the string consists only of letters and numbers
+            and is not blank.
+          • isdecimal() returns True if the string consists only of numeric characters
+            and is not blank.
+          • isspace() returns True if the string consists only of spaces, tabs, and new-
+            lines and is not blank.
+          • istitle() returns True if the string consists only of words that begin with
+            an uppercase letter followed by only lowercase letters
+                >>>'abc'.isalpha()
+                True
+                >>>'abc123'.isalnum()
+                True
+                >>>'123'.isdecimal()
+                True
+                >>>'    '.isspace()
+                True
+                >>>'The Man Is Cold Blooded'.istitle()
+                True
+       3.The startswith(),endswith() methods:
+             >>>'hello world'.startswith('hello')
+             True
+             >>> 'asian'.endswith('an')
+             True
+    
+      4.join(),split() methods:
+        This are used to join or split a list of items in to a string.
+            >>> ' '.join(['i', 'am', 'a', 'good', 'boy'])
+            'i am a good boy'
+        The starting( ' ' )can be filled with variables that you want insert b/w them.
+        split is quit opposite to join it splits a string into list.
+            >>> 'my name is prudhvi'.split( )
+            ['my', 'name', 'is', 'prudhvi']
+            >>> 'my name is prudhvi'.split('m')
+            ['', 'y na', 'e is prudhvi']
+      5.Justifying text with rjust(),ljust(),center() methods:
+          >>> 'hello'.ljust(20)
+          'hello               '
+          >>> 'hello'.rjust(20)
+          '               hello'
+          >>> 'hello'.center(20)
+          '       hello        '
+          >>> 'hello'.center(20,'*')
+          '*******hello********'
+          >>> 'hello'.rjust(20,'a')
+          'aaaaaaaaaaaaaaahello'
+          >>> 'hello'.ljust(20,'a')
+          'helloaaaaaaaaaaaaaaa'
+      6.Removing white space using strip(),rstrip(),lstrip() methods:
+              >>> spam='    hello world     '
+              >>> spam.strip()
+              'hello world'
+              >>> spam.rstrip()
+              '    hello world'
+              >>> spam.lstrip()
+              'hello world     '
+              >>> spam='amspspamABCDEFmpasmaps'
+              >>> spam.strip('spam')
+              'ABCDEF'
+              >>> spam.rstrip('spam')
+              'amspspamABCDEF'
+              >>> spam.lstrip('spam')
+              'ABCDEFmpasmaps'
+          The variable in strip can be of any changes like in this case.
+          either you pass 'spam', 'maps', 'amps', until it contain the required characters it will remove it.
+      7.Copying and Pasting Strings with the pyperclip Module:
+            The pyperclip module has copy() and paste() functions that can send text
+            to and receive text from your computer’s clipboard. Sending the output of
+            your program to the clipboard will make it easy to paste it to an email, word
+            processor, or some other software.
+            Pyperclip does not come with Python. To install it.
+    
+                  >>>import pyperclip
+                  >>>pyperclip.copy('Hello world!')
+                  >>>pyperclip.paste()
+                  'Hello world!'
+            Of course, if something outside of your program changes the clipboard
+            contents, the
+            paste() function will return it.
+            For example, if I copied this sentence to the clipboard and then called
+            paste(), it would look like this:
+                  >>>pyperclip.paste()
+                  'For example, if I copied this sentence to the clipboard and then called
+                  paste(), it would look like this:'
+
+#Pattern matching with Regular expressions:
+      The syntax regex is used for this.
+      1.import re
+      While searching for something we use (ctrl_f).
+      But by using regular expressions we can go one step further.
+      By defining a pattern for the search we can search all of this.
+      EX: phone numbers
+      To find the phone number in a text normally we write
+      let the phone be of type ddd-ddd-dddd.
+      def isphonenumber(number):
+          if len(number) != 12:
+              return False
+          if not number[0:3].isdecimal():
+              return False
+          if number[3] != '-':
+              return False
+          if not number[4:7].isdecimal():
+              return False
+          if number[7] != '-':
+              return False
+          if not number[8:13].isdecimal():
+              return False
+          return True
+       print('is it a phone number or not')
+       print('455-555-9999 is pn:', isphonenumber('455-555-9999'))
+       print('mos-ifg-uhrf is pn:', isphonenumber('mos-ifg-uhrf'))
+       message='Call me at 415-555-1011 tomorrow. 415-555-9999 is my office.'
+       for i in range(len(message)):
+           if isphonenumber(message[i:i+12]):
+               print(message[i:i+12])
+       print("Done numbers found!")
+       What if the number is not of that type rather it is of
+       (ddd) ddd-dddd, ddd.ddd.dddd,.....we have write the whole code again.
+    
+       Rather than this by using regular expressions called regex for short, we can find it easily
+        in regex \d -denotes a decimal number from (0 to 9).
+        we can define the phone number as '\d\d\d-\d\d\d-\d\d\d\d'.
+        This can be written more sophisticated way as '\d{3}-\d{3}-\d{4}'.{i} i->number of times.
+        syntax:
+        >>>import re
+        # The string Pattern passed to the re.compile() statement.and to a variable
+        # Now the phonenumregex contain the regex object.
+        >>> phonenumregex=re.compile(r'\d{3}-\d{3}-\d{4}')
+        # The string that is to searched is passed using a search() statement.
+        # This method return a Math object.
+        >>> mo = phonenumregex.search('My number is 415-555-4242.')
+        # Math object has group() function which returns the pattern matched string.
+        # It returns none if their is no matched string.
+        >>> print("pn found:",mo.group())
+        pn found: 415-555-4242
+    
+        ///While there are several steps to using regular expressions in Python, each
+        step is fairly simple.///
+    
+        1.Import the regex module with import re.
+        2.Create a Regex object with the re.compile() function. (Remember to use a raw string.)
+        3.Pass the string you want to search into the Regex object’s search() method.
+          This returns a Match object.
+        4.Call the Match object’s group() method to return a string of the actual matched text.
+    
+      Different methods in matching:
+        1.Grouping with parenthesis:
+            If you want to separate the number into groups and search separately.
+            you can group the pattern in regex with parenthesis:
+            # The first() represent the first group and seond() the second group.
+            # To call first group mo.group(1) and similarly mo.group(2) for second.
+            >>>phoneNumRegex = re.compile(r'(\d\d\d)-(\d\d\d-\d\d\d\d)')
+            >>>mo = phoneNumRegex.search('My number is 415-555-4242.')
+            >>>mo.group(1)
+            '415'
+            >>>mo.group(2)
+            '555-4242'
+            # mo.group(0) or nothing return whole pattern.
+            >>>mo.group()
+            '415-555-4242'
+            # by using plural form of group as groups we can get the groups separately in a tuple DT.
+            >>>mo.groups()
+            ('415','555-4242')
+            # We can assign them to different variables as their are tuples.
+            >>>areacode, mainnumber=mo.groups()
+            >>>areacode
+            '415'
+            >>>mainnumber
+            '555-4242'
+            # If you want to use () in the pattern use \ (escape char) in the code.
+            # If you don't use r in regex you must use '\\' before every word.
+            >>>phoneNumRegex = re.compile(r'(\(\d\d\d\)) (\d\d\d-\d\d\d\d)')
+        2.Matching multiple groups with pipe:
+            pipe means | symbol.
+            If you are sure what you want to search you can use | to give #multiple input patterns.
+            But it returns the first seen pattern matching only.
+            EX:
+            >>>hero=re.complie(r'batman|tommy')
+            >>>mo=hero.search('batman and tommy')
+            >>>mo.group()
+            batman
+            >>>mo=hero.search('tommy and batman')
+            >>>mo.group()
+            tommy
+            >>>mo=hero.search('superman and spiderman')
+            >>>mo.group()==None
+            True
+          You can also use to match several patterns like.
+           >>>hero=re.compile(r'bat(man|mobile|car|bike)')
+           >>>mo=hero.search('batmobile and batcar')
+           >>>mo.group()
+           'batmobile'
+           >>>mo.group(1)
+           'mobile'
+         If you want to use | in the pattern use \| for it.
+    
+       4.Optional matching with question mark:
+           >>>batregex=re.compile(r'bat(wo)?man')
+           >>>mo1=batregex.search('he is a batman')
+           # The (wo)? statement is optional one.
+           # It may be present or may not it will return the required output pattern.
+           >>>mo1.group()
+           'batman'
+           >>>mo2.batregex.search('she is a batwoman')
+           >>>mo2.group()
+           'batwoman'
+        "Match zero or one of the group preceding"
+      5.Matching zero or more with the Star:
+          By using * symbol we can match "Zero or More"
+          The group preceding the star can occur none times or more the one time.
+          >>>hero=re.compile(r'bat(wo)*man')
+          >>>mo1=hero.search('she is a batwoman')
+          >>>mo1.group()
+          'batwoman'
+          >>>mo1=hero.search('she is a batwowoman')
+          >>>mo1.group()
+          'batwowoman'
+          >>>mo1=hero.search('she is a batwowowowowoman')
+          >>>mo1.group()
+          'batwowowowowoman'
+        "Zero instances or more than one instances of ((var)*) var in the parenthesis "
+      6.Matching one or more using plus:
+            >>>hero=re.compile(r'bat(wo)+man')
+            >>>mo1=hero.search('she is a batwoman')
+            >>>mo1.group()
+            'batwoman'
+            >>>mo1=hero.search('she is a batwowoman')
+            >>>mo1.group()
+            'batwowoman'
+            >>>mo1=batregex.search('he is a batman')
+            >>>mo1.group()==None
+            True
+          "Matches one or more instances of occurence"
+      7.Matching repetitions with curly braces:
+            If the pattern is being repeated the {n}(n denotes repeating freq) is used after the repeater.
+            such as (ha){3} --> represents three times repeated pattern of ha as (hahaha)
+            (ha){1,3} --> means one to three times repeated ha as (ha, haha, hahaha)
+            (ha){1,} --> means one or many times.
+            (ha){,5} --> means zero to five times as('', ha, haha, hahaha, hahahaha, hahahahaha)
+            Representation:
+            (Ha){3,5} is represented internally as
+            ((Ha)(Ha)(Ha))|((Ha)(Ha)(Ha)(Ha))|((Ha)(Ha)(Ha)(Ha)(Ha))
+                >>>haRegex = re.compile(r'(Ha){3}')
+                >>>mo1 = haRegex.search('HaHaHa')
+                >>>mo1.group()
+                'HaHaHa'
+                >>>mo2 = haRegex.search('Ha')
+                >>>mo2 == None
+                True
+      8.Greedy or Nongreedy matching:
+          while matching (ha){3,5}
+          it returns with the max length string such as
+          >>>greedyHaRegex = re.compile(r'(Ha){3,5}')
+          >>>mo1 = greedyHaRegex.search('HaHaHaHaHa')
+          >>>mo1.group()
+          'HaHaHaHaHa'
+          To get the minimum length string we can ? after the pattern declaration.
+          >>>greedyHaRegex = re.compile(r'(Ha){3,5}?')
+          >>>mo1 = greedyHaRegex.search('HaHaHaHaHa')
+          >>>mo1.group()
+          'HaHaHa'
+      9.The findall() method:
+          When we use search() function it returns with the first matched text
+          If their are many such patterns in the data findall() is useful for that.
+          syntax:
+            # for search()
+            >>>phonenumregex=re.compile(r'\d{3}-\d{3}-\d{4}')
+            >>>mo1=phonenumregex.search("my phone number is 422-111-2343 and 222-123-1234")
+            >>>mo1.group()
+            '422-111-2343'
+            # for findall()
+            >>>phonenumregex=re.compile(r'\d{3}-\d{3}-\d{4}')
+            # It returns a list containing all the possible matches.
+            >>>mo1=phonenumregex.findall("my phone number is 422-111-2343 and 222-123-1234")
+            ['422-111-2343','222-123-1234']
+            If the pattern has grouped patterns then this are returned separately in tuples inside a list
+            >>>phoneNumRegex = re.compile(r'(\d\d\d)-(\d\d\d)-(\d\d\d\d)')
+            >>>phoneNumRegex.findall('Cell: 415-555-9999 Work: 212-555-0000')
+            [('415','555','9999'),('212','555','0000')]

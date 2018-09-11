@@ -1,0 +1,7 @@
+print('hello world!')
+print("What is your name?")
+Name=input("Name:")
+print("Nice to meet you",Name)
+print("What is your age?")
+Age=int(input("age:"))
+print("By next year you will be",Age+1)
